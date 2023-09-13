@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 68.8px;
+    background-color: white;
+    z-index: 3;
+}
+
+
+#nav-options {
+    margin-top: 18px;
+    /*border: 1px solid black;*/
+    list-style-type: none;
+    
+}
+
+#nav-options li {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 20px;
+    font-family: 'ApercuPro-Light';
+    letter-spacing: 0;
+    color: gray;
+}
+
+#nav-options li:first-child {
+    margin-left: -15px;
+}
+
+#nav-title {
+    border: none;
+    height: 28.8px;
+    width: 68.8px;
+    margin-top: 12px;
+    margin-right: 250px;
+}
+
+#nav-about {
+    height: 45px;
+    margin-right: 23px;
+    width: 200px;
+    margin-top: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#nav-about span {
+    color: gray;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-left: 6px;
+    font-family: 'ApercuPro-Light';
+}
+
+main {
+    position: absolute;
+    margin-top: 70px;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel-items {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-1 {
+    background: url("https://nack.life/cdn/shop/files/desktopbanner_1280x.jpg?v=1692342864");
+}
+
+.carousel-item-2 {
+    background: url("https://nack.life/cdn/shop/files/Carousel_Web_Banner_img-01_1280x.jpg?v=1684483241");
+}
+
+.carousel-item-3 {
+    background: url("https://nack.life/cdn/shop/files/Yoga_Day_Journal_Desktop_1280x.jpg?v=1689658304");
+}
+
+.item {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item h2 {
+    font-family: "GTSuperDisplay-Regular" !important;
+    font-size: 45px;
+    font-weight: 500 !important;
+    color: white;
+}
+
+.item p {
+    margin-top: 10px;
+    color: white;
+}
+
+.item button {
+    height: 50px;
+    width: 170px;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.item button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    color: #face93;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-indicators label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators label:hover {
+    background-color: white;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#slide1:checked ~ .carousel-items {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .carousel-items {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-items {
+    transform: translateX(-200%);
+}
+  
+
+/* .carousel-container {
+    position: relative;
+    height: 80%;
+    border: 1px solid black;
+}
+
+.carousel {
+    overflow: hidden;
+    display: none;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: white;
+}
+
+.fade {
+    height: 100%;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4;}
+    to { opacity: 1;}
+} */
+
+
+.slideshow-container {
+    margin-top: 50px;
+    width: 100%;
+    position: relative;
+}
+  
+.arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    width: 15px;
+    height: 15px;
+}
+  
+#arrow-left {
+    left: 10px;
+}
+  
+#arrow-right {
+    right: 0;
+    margin-right: 30px;
+}
+  
+#slider {
+    width: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    margin-left: 60px;
+}
+  
+.slides {
+    width: 30.33%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+}
+
+
+.slides img {
+    width: 90%;
+    height: auto;
+}
+
+/* .slides {
+    flex: 0 0 33.33%; /* adjust the width to fit 3 items 
+} */
+
+.product-desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#first p {
+    width: 120px;
+}
