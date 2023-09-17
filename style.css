@@ -7,6 +7,10 @@ body {
     position: relative;
 }
 
+ul {
+    list-style-type: none;
+}
+
 nav {
     position: fixed;
     width: 100%;
@@ -494,11 +498,17 @@ footer {
     align-items: center;
 }
 
+#main-footer-part div {
+    border: 1px solid white;
+}
+
 #main-footer-part {
+    height: 60%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 #image-and-icon {
@@ -506,9 +516,26 @@ footer {
     flex-direction: row;
 }
 
-#about {
+
+#about ul li {
+    width: 20px;
+    height: 20px;
+}
+
+#about ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+#about a {
+    color: #ffffff;
+}
+
+#form-part form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #copyright-part {
