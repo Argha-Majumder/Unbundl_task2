@@ -3,6 +3,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font-family-light: 'ApercuPro-Light';
+    --font-family-gt: 'GTSuperDisplay-Regular';
+}
+
 body {
     position: relative;
 }
@@ -51,6 +56,10 @@ nav {
     margin-right: 250px;
 }
 
+.down-symbol:hover {
+    cursor: pointer;
+}
+
 #nav-about {
     height: 45px;
     margin-right: 23px;
@@ -67,6 +76,47 @@ nav {
     margin-top: 6px;
     margin-left: 6px;
     font-family: 'ApercuPro-Light';
+}
+
+.nav-text:hover {
+    cursor: pointer;
+    border-bottom: 1px solid black;
+}
+
+#nav-about svg:hover {
+    cursor: pointer;
+}
+
+.content {
+    position: fixed;
+    border: 1px solid rgba(33,37,41,0.2);
+    background-color: white;
+    z-index: 3;
+}
+
+.content ul li {
+    display: block;
+    font-size: 14px;
+    margin: 33px 10px 15px 10px;
+    font-family: 'ApercuPro-Light';
+    letter-spacing: 0;
+    color: gray;
+}
+
+#content1 {
+    visibility: hidden;
+    left: 220px;
+    height: 140px;
+    top: 50px;
+    width: 300px;
+}
+
+#content2 {
+    visibility: hidden;
+    left: 320px;
+    top: 50px;
+    height: 240px;
+    width: 300px;
 }
 
 main {
@@ -498,49 +548,119 @@ footer {
     align-items: center;
 }
 
-#main-footer-part div {
-    border: 1px solid white;
-}
-
 #main-footer-part {
     height: 60%;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #image-and-icon {
+    height: 40%;
+    width: 20%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
+#image-and-icon img {
+    height: 40px;
+    width: 80px;
+}
+
+#image-and-icon ul {
+    padding: 0;
+}
+
+#image-and-icon ul li {
+    margin-left: 15px;
+    float: left;
+    display: inline;
+}
+
+#image-and-icon ul li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#about {
+    height: 65%;
+    width: 25%;
+}
 
 #about ul li {
-    width: 20px;
-    height: 20px;
+    padding: 5px;
 }
 
 #about ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: end;
+    flex-wrap: wrap;
 }
 
 #about a {
     color: #ffffff;
+    font-size: 14px;
+    font-family: var(--font-family-light);
+}
+
+#form-part {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#form-part h3 {
+    font-size: 30px;
+    font-family: var(--font-family-gt);
 }
 
 #form-part form {
+    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+
+#form-email {
+    border: 1px solid #e8ecf2;
+    height: 40px;
+    background-color: #000;
+}
+
+#email {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+    border-style: none;
+}
+
+#email:focus {
+    color: #fff;
+    outline: none;
+}
+
+#form-button {
+    font-weight: bold;
+    font-size: 14px;
+    height: 38px;
+    border: none;
+    text-transform: uppercase;
+    background-color: #face93;
 }
 
 #copyright-part {
     text-align: center;
     color: #ffffffbf;
     font-size: 17px;
-    font-family: ApercuPro-Light;
+    font-family: var(--font-family-light);
 }
