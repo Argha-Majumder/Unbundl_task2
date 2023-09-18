@@ -1,11 +1,10 @@
 var slider = document.getElementById("slider");
 var arrowLeft = document.getElementById("arrow-left");
 var arrowRight = document.getElementById("arrow-right");
-
 let contentListOne = document.getElementById('content1');
 let contentListTwo = document.getElementById('content2');
-let toggleOne = true;
-let toggleTwo = true;
+let toggleOne = false;
+let toggleTwo = false;
 
 arrowLeft.addEventListener("click", function() {
     slider.scrollLeft -= slider.offsetWidth;
@@ -16,20 +15,31 @@ arrowRight.addEventListener("click", function() {
 });
 
 function openMenuOne() {
-    if (toggleOne) {
+    if (toggleTwo) {
+        contentListTwo.style.visibility = 'hidden';
         toggleTwo = false;
-        openMenuTwo();
     }
-    contentListOne.style.visibility = toggleOne?'visible':'hidden';
     toggleOne = !toggleOne;
+    contentListOne.style.visibility = toggleOne?'visible':'hidden';
 }
 
 function openMenuTwo() {
-    if (toggleTwo) {
+    if (toggleOne) {
+        contentListOne.style.visibility = 'hidden';
         toggleOne = false;
-        openMenuOne();
     }
-    contentListTwo.style.visibility = toggleTwo?'visible':'hidden';
     toggleTwo = !toggleTwo;
+    contentListTwo.style.visibility = toggleTwo?'visible':'hidden';
 }
 
+document.addEventListener('click', function (event) {
+  const downSymbols = document.querySelectorAll('.fa-angle-down.down-symbol');
+  if (event.target !== downSymbols[0] && event.target !== contentListOne) {
+      contentListOne.style.visibility = 'hidden';
+      toggleOne = false;
+  }
+  if (event.target !== downSymbols[1] && event.target !== contentListTwo) {
+      contentListTwo.style.visibility = 'hidden';
+      toggleTwo = false;
+  }
+});
