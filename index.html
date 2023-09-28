@@ -12,6 +12,23 @@
 </head>
 <body>
     <nav>
+        <label>
+            <input type="checkbox" name="" id="">
+            <div class="toggle">
+                <span class="top-line common"></span>
+                <span class="middle-line common"></span>
+                <span class="bottom-line common"></span>
+            </div>
+            <div class="slide">
+                <ul>
+                    <li><span class="nav-text">Shop Now</span></li>
+                    <li><span class="nav-text">Health Experts</span></li>
+                    <li><span class="nav-text">Naked Way</span><i class="fa-solid fa-arrow-right" style="color: #2f3237;"></i></li>
+                    <li><span class="nav-text">Näck Journals</span><i class="fa-solid fa-arrow-right" style="color: #2f3237;"></i></li>
+                    <li><span class="nav-text">About Us</span></li>
+                </ul>
+            </div>
+        </label>
         <ul id="nav-options">
             <li class="nav-text">Shop Now</li>
             <li class="nav-text">Health Experts</li>
@@ -51,22 +68,28 @@
             <input type="radio" id="slide1" name="carousel-radio" checked>
             <input type="radio" id="slide2" name="carousel-radio">
             <input type="radio" id="slide3" name="carousel-radio">
+            <input type="radio" id="slide4" name="carousel-radio">
             
             <div class="carousel-items">
                 <div class="item carousel-item-1">
-                    <h2>Rapid Recovery. Effective Hydration</h2>
-                    <p>Boost performance and hydration with a unique blend of full-spectrum Essential Amino Acids and electrolytes</p>
+                    <h2>Informed Choice Certified</h2>
+                    <p>High-quality Whey designed by experts to power your performance and recovery</p>
                     <button>SHOP NOW</button>
                 </div>
                 <div class="item carousel-item-2">
-                    <h2>Stronger Than The Summer Sun!</h2>
-                    <p>Protect your skin from the harmful UV rays this summer with nature's strongest antioxidant - Astaxanthin.</p>
+                    <h2>The Immunity Boost</h2>
+                    <p>Boost your immune system and vitality with nature's strongest antioxidant - Natural Astaxanthin</p>
                     <button>SHOP NOW</button>
                 </div>
                 <div class="item carousel-item-3">
-                    <h2>Beyond the Yoga Mat</h2>
-                    <p>Yoga practitioners and trainers share the benefits of Yoga on and off the mat</p>
+                    <h2>The Power Of Plant Proteins</h2>
+                    <p>Explore ways to optimise protein intake as a vegetarian</p>
                     <button>READ MORE</button>
+                </div>
+                <div class="item carousel-item-4">
+                    <h2>Rapid Recovery. Effective Hydration</h2>
+                    <p>Boost performance and hydration with a unique blend of full-spectrum Essential Amino Acids and electrolytes</p>
+                    <button>SHOP NOW</button>
                 </div>
             </div>
             
@@ -74,6 +97,7 @@
                 <label for="slide1"></label>
                 <label for="slide2"></label>
                 <label for="slide3"></label>
+                <label for="slide4"></label>
             </div>
         </section>
 
@@ -298,9 +322,9 @@
                     <div id="form-email">
                         <input type="email" name="email" id="email" placeholder="Enter email" required>
                     </div>
-                    <div>
+                    <div id="label-part">
                         <input type="checkbox" name="privacy" id="privacy">
-                        <label for="privacy" style="color: #edeff2;">I have read and accepted the Näck privacy policy.</label>
+                        <label for="privacy" style="color: white">I have read and accepted the Näck privacy policy.</label>
                     </div>
                     <button id="form-button">join now</button>
                 </form>
